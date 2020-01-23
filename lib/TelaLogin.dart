@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_signin_button/flutter_signin_button.dart';
 
-void main() => runApp(TelaLogin());
+import 'main.dart';
+
+//void main() => runApp(TelaLogin());
 
 class TelaLogin extends StatefulWidget {
   @override
@@ -11,14 +13,7 @@ class TelaLogin extends StatefulWidget {
 class _TelaLoginState extends State<TelaLogin> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: "Tela de Login",
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        brightness: Brightness.light,
-        primaryColor: Colors.black
-      ),
-      home: Scaffold(
+    return Scaffold(
         backgroundColor: Colors.blueAccent,
         body: Center(
           child: Column(
@@ -36,7 +31,9 @@ class _TelaLoginState extends State<TelaLogin> {
               SignInButton(
                 Buttons.Google,
                 text: "Entrar com o Google",
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(context, '/home');
+                },
               ),
               SignInButton(
                 Buttons.Facebook,
@@ -46,7 +43,6 @@ class _TelaLoginState extends State<TelaLogin> {
             ],
           ),
         ),
-      ),
-    );    
+      );  
   }
 }

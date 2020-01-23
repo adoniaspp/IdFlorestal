@@ -1,62 +1,32 @@
 import 'package:flutter/material.dart';
-import './feed.dart';
-import './pesquisa.dart';
-import './perfil.dart';
+import 'package:flutter_signin_button/flutter_signin_button.dart';
 
-void main() => runApp(IdFlorestalApp());
+import 'Home.dart';
+import 'TelaLogin.dart';
+import 'main.dart';
 
-class IdFlorestalApp extends StatelessWidget {
-  // This widget is the root of your application.
+void main() => runApp(Main());
+
+class Main extends StatefulWidget {
+  @override
+  _MainState createState() => _MainState();
+}
+
+class _MainState extends State<Main> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'IdFlorestal',
       theme: ThemeData(
         primarySwatch: Colors.green,
+        brightness: Brightness.light,
       ),
-      home: Main(),
-    );
-  }
-}
+      debugShowCheckedModeBanner: false,
 
-class Main extends StatefulWidget {
-  @override
-  MainState createState() => MainState();
-}
-
-class MainState extends State<Main> {
-  int _selectedIndex = 0;
-  final _indexTitleMap = <int, String>{
-    0: "Feed",
-    1: "Pesquisa",
-    2: "Perfil"
-  };
-  final _indexWidgetMap = <int, Widget>{
-    0: Feed(),
-    1: Pesquisa(),
-    2: Perfil()
-  };
-
-  String getCurrentTitle() => _indexTitleMap[_selectedIndex];
-  Widget getCurrentWidget() => _indexWidgetMap[_selectedIndex];
-  onTap(int index) => setState(() => _selectedIndex = index);
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(getCurrentTitle()),
-      ),
-      body: getCurrentWidget(),
-      bottomNavigationBar: BottomNavigationBar(
-        items: [
-          BottomNavigationBarItem(icon: Icon(Icons.list), title: Text("Feed")),
-          BottomNavigationBarItem(icon: Icon(Icons.search), title: Text("Pesquisa")),
-          BottomNavigationBarItem(icon: Icon(Icons.person), title: Text("Perfil"))
-        ],
-        currentIndex: _selectedIndex,
-        onTap: onTap,
-      ),
-    );
+      routes: {
+        '/': (context) => TelaLogin(),
+        '/home': (context) => IdFlorestalApp(),
+      },
+    );    
   }
 }
