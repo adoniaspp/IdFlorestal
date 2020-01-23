@@ -1,14 +1,29 @@
 import 'package:flutter/material.dart';
 
-class FeedPage extends StatefulWidget {
-  FeedPage({Key key, this.title}) : super(key: key);
+  void main() => runApp(MyApp());
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        primaryColor: Colors.green
+      ),
+      home: MyHomePage(title: 'ID FLORESTAL'),
+    );
+  }
+}
+class MyHomePage extends StatefulWidget {
+  MyHomePage({Key key, this.title}) : super(key: key);
 
   final String title;
 
   @override
-  _FeedPageState createState() => _FeedPageState();
+  _MyHomePageState createState() => _MyHomePageState();
 }
-class _FeedPageState extends State<FeedPage> {
+class _MyHomePageState extends State<MyHomePage> {
  int _selectedIndex = 0;
 
   void _onItemTapped(int index) {

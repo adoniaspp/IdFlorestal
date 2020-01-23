@@ -33,7 +33,7 @@ class IdFlorestalAppState extends State<IdFlorestalApp> {
     2: "Perfil"
   };
   final _indexWidgetMap = <int, Widget>{
-    0: FeedPage(),
+    0: Feed(),
     1: Pesquisa(),
     2: Perfil()
   };
