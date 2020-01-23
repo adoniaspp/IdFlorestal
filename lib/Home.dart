@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:id_florestal/telaPrincipal.dart';
 import './feed.dart';
 import './pesquisa.dart';
 import './perfil.dart';
@@ -32,7 +33,7 @@ class IdFlorestalAppState extends State<IdFlorestalApp> {
     2: "Perfil"
   };
   final _indexWidgetMap = <int, Widget>{
-    0: Feed(),
+    0: FeedPage(),
     1: Pesquisa(),
     2: Perfil()
   };
