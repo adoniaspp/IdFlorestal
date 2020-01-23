@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_signin_button/flutter_signin_button.dart';
-
 import 'Home.dart';
 import 'TelaLogin.dart';
-import 'main.dart';
 
 void main() => runApp(Main());
 

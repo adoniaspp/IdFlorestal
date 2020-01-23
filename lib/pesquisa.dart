@@ -179,7 +179,6 @@ class EspecieView extends StatelessWidget {
               child: Text(genero.label),
               color: Colors.blue[100 * genero.id],
             ),
-            
           );
         }).toList(),
     );

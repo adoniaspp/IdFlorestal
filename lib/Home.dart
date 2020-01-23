@@ -3,22 +3,6 @@ import './feed.dart';
 import './pesquisa.dart';
 import './perfil.dart';
 
-//void main() => runApp(IdFlorestalApp());
-
-/*class IdFlorestalApp extends StatefulWidget {
-  // This widget is the root of your application.
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'IdFlorestal',
-      theme: ThemeData(
-        primarySwatch: Colors.green,
-      ),
-      home: Main(),
-    );
-  }
-}*/
-
 class IdFlorestalApp extends StatefulWidget {
   @override
   IdFlorestalAppState createState() => IdFlorestalAppState();
