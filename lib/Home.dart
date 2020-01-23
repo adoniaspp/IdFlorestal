@@ -46,6 +46,7 @@ class IdFlorestalAppState extends State<IdFlorestalApp> {
     return Scaffold(
       appBar: AppBar(
         title: Text(getCurrentTitle()),
+        automaticallyImplyLeading: true,
       ),
       body: getCurrentWidget(),
       bottomNavigationBar: BottomNavigationBar(

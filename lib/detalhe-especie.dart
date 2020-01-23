@@ -13,9 +13,8 @@ class _DetalheEspecieState extends State<DetalheEspecie> {
         primaryColor: Colors.green,
       ),
       home: Scaffold(
-       
-          drawer: Drawer(),
           appBar: AppBar(
+            automaticallyImplyLeading: true,
             title: Text(
               "Detalhe Espécie",
               style: TextStyle(fontWeight: FontWeight.bold),
